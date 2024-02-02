@@ -1,3 +1,4 @@
+.vscode
 .pio
 sdkconfig*
 !sdkconfig.defaults

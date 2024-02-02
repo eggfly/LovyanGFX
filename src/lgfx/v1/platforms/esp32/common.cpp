@@ -286,7 +286,7 @@ namespace lgfx
       if (spi_sclk >= 0) {
         gpio_lo(spi_sclk); // ここでLOWにしておくことで、pinMode変更によるHIGHパルスが出力されるのを防止する (CSなしパネル対策);
       }
-#if defined (ARDUINO) // Arduino ESP32
+#if defined (ARDUINO_MOCK) // Arduino ESP32
       if (spi_host == default_spi_host)
       {
         SPI.end();
@@ -363,7 +363,7 @@ namespace lgfx
       if (spi_sclk >= 0) {
         gpio_lo(spi_sclk); // ここでLOWにしておくことで、pinMode変更によるHIGHパルスが出力されるのを防止する (CSなしパネル対策);
       }
-#if defined (ARDUINO) // Arduino ESP32
+#if defined (ARDUINO_MOCK) // Arduino ESP32
       if (spi_host == default_spi_host)
       {
         SPI.end();
